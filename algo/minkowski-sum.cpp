@@ -33,8 +33,8 @@ vector<vec_t> minkowski_sum(const vector<vec_t> &a, const vector<vec_t> &b) {
   partial_sum(all(ans), ans.begin());
 
   vec_t shift = *min_element(all(a)) +
-    *min_element(all(b)) -
-    *min_element(all(ans));
+                *min_element(all(b)) -
+                *min_element(all(ans));
 
   for (auto &v : ans) v = v + shift;
   return ans;
